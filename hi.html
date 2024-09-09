@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="item1">how are you doing</h1>
+    <a id="submit" href="templates/login.html" >click</a>
+    <script>
+        var item = document.getElementById("item1").innerHTML
+        var btn = document.getElementById("submit")
+        
+        document.getElementById("item1").innerHTML = '';
+        console.log (item)
+        i =0;
+        // btn.addEventListener("click", function(){
+        //     if (i < item.length){
+        //         document.getElementById("item1").innerHTML += item.charAt(i);
+        //         i ++;
+        //         setTimeout(texttyping, 100)
+        //     }
+        // });
+
+        btn.addEventListener("click", function(){
+            event.preventDefault();
+        });
+
+        function texttyping () {
+            if (i < item.length){
+                document.getElementById("item1").innerHTML += item.charAt(i);
+                i ++;
+                setTimeout(texttyping, 100);
+            }
+        }
+
+        // texttyping()
+    </script>
+</body>
+</html>
